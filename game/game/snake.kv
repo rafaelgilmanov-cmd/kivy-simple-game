@@ -1,0 +1,33 @@
+#:kivy 2.0.0
+
+<SnakePart>:
+    size: 20, 20
+    canvas:
+        Color:
+            rgb: 0, 1, 0
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+<Food>:
+    size: 20, 20
+    canvas:
+        Color:
+            rgb: 1, 0, 0
+        Ellipse:
+            pos: self.pos
+            size: self.size
+
+<SnakeGame>:
+    canvas:
+        Color:
+            rgb: 0, 0, 0
+        Rectangle:
+            pos: self.pos
+            size: self.size
+    
+    Label:
+        text: 'Score: {}'.format(root.score)
+        pos: root.x, root.top - 40
+        size: 100, 40
+        color: 1, 1, 1, 1
